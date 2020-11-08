@@ -4,7 +4,17 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-
+        ListNode head = new ListNode();
+        ListNode p = head;
+        for (int i = 0; i < 5; ++i) {
+            p.val = i+1;
+            p.next = new ListNode();
+            if (i == 4)
+                p.next = null;
+            p = p.next;
+        }
+        Solution solution = new Solution();
+        solution.removeNthFromEnd(head, 2);
     }
 }
 
